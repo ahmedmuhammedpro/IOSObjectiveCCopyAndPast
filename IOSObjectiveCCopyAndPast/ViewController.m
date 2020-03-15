@@ -12,7 +12,9 @@
 
 @end
 
-@implementation ViewController
+@implementation ViewController {
+    NSString *str;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -20,4 +22,11 @@
 }
 
 
+- (IBAction)copy:(UIButton *)sender {
+    str = [_textField text];
+}
+
+- (IBAction)past:(UIButton *)sender {
+    [_label setText: str];
+}
 @end
